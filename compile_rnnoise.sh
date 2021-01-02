@@ -14,7 +14,9 @@ cd rnnoise-master
 make
 cd -
 mkdir -p rnnoise_wrapper/libs
-mv rnnoise-master/.libs/librnnoise.so.0.4.1 rnnoise_wrapper/libs/librnnoise_default.so.0.4.1
+
+rm -rf rnnoise-master/.libs/*
+mv rnnoise-master/.libs/lib* rnnoise_wrapper/libs/*
 rm -rf rnnoise-master
 
-echo -e "\n'librnnoise.so.0.4.1' has been successfully moved to 'rnnoise_wrapper/libs/librnnoise_default.so.0.4.1'"
+echo -e "\n'librnnoise' has been successfully moved to 'rnnoise_wrapper/libs/librnnoise'"

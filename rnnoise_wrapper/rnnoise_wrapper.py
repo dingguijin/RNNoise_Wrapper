@@ -75,7 +75,7 @@ class RNNoise(object):
         if not f_name_lib:
             subname = 'librnnoise'
             system = platform.system()
-            if system == 'Linux' or system == 'Darwin':
+            if system == 'Linux':
                 found_f_name_lib = pkg_resources.resource_filename(package_name, 'libs/{}_5h_b_500k.so.0.4.1'.format(subname))
                 if not os.path.exists(found_f_name_lib):
                     found_f_name_lib = self.__find_lib(subname)
